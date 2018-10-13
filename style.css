@@ -1,0 +1,29 @@
+
+.picked-card {
+  max-width: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+}
+
+.pattern,
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  height: 510px;
+}
+
+.pattern {
+  background-color: tomato;
+}
+
+.face {
+  transform: rotateY(180deg);
+}
+
+.picked-card.show {
+  transform: rotateY(180deg);
+}
