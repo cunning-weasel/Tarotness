@@ -1,4 +1,5 @@
 
+
 .picked-card {
   max-width: 300px;
   position: relative;
@@ -14,10 +15,19 @@
   width: 100%;
   backface-visibility: hidden;
   height: 510px;
+  align: center;
 }
 
 .pattern {
-  background-color: tomato;
+  background:
+  linear-gradient(30deg, #bdbdbd 12%, transparent 12.5%, transparent 87%, #bdbdbd 87.5%, #bdbdbd 0),
+linear-gradient(150deg, #bdbdbd 12%, transparent 12.5%, transparent 87%, #bdbdbd 87.5%, #bdbdbd 0),
+linear-gradient(30deg, #bdbdbd 12%, transparent 12.5%, transparent 87%, #bdbdbd 87.5%, #bdbdbd 0),
+linear-gradient(150deg, #bdbdbd 12%, transparent 12.5%, transparent 87%, #bdbdbd 87.5%, #bdbdbd 0),
+linear-gradient(60deg, #dbdbdb 25%, transparent 25.5%, transparent 75%, #dbdbdb 75%, #dbdbdb 0),
+linear-gradient(60deg, #dbdbdb 25%, transparent 25.5%, transparent 75%, #dbdbdb 75%, #dbdbdb 0), #ccc;
+background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+background-size: 80px 140px;
 }
 
 .face {
@@ -29,13 +39,35 @@
 }
 
 .card-description {
-  position: absolute;
-  top: 90%;
-  left: 5%;
-  text-align: left;
-  padding-top: 10px;
+  position: relative;
+  /*top: 65%;*/
+  text-align: center;
+  padding-top: 15px;
 }
 
 .hide {
   display: none;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+body {
+  background-image: linear-gradient(white, purple);
+}
+
+@media only screen and (max-width: 600px) {
+  .picked-card {
+    width: 100%;
+  }
+  @media only screen and (min-width: 316px) {
+  .card-description {
+    position: relative;
+    /*top: 55%;*/
+    text-align: center;
+    padding-top: 15px;
+  }
 }

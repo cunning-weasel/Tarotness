@@ -17,7 +17,6 @@ const tarotCardDesc = [{
 } ];
 // console.log(tarotCard[5]);
 
-
 // fuction returns number atuomaticallly
 function pickRandomCard1() {
 const index = Math.random(); // generating a random number
