@@ -1,9 +1,25 @@
 // declaring the tarotCard array
-const tarotCard = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const tarotCardDesc = [{
+  src: "card-0.jpg",
+  desc: "queen of cups",
+},
+{
+  src: "card-1.jpg",
+  desc: "the fool",
+  },
+{
+  src: "card-2.jpg",
+  desc: "the star",
+  },
+{
+  src: "card-3.jpg",
+  desc: "the hangman",
+} ];
 // console.log(tarotCard[5]);
 
+
 // fuction returns number atuomaticallly
-function pickRandomCard() {
+function pickRandomCard1() {
 const index = Math.random(); // generating a random number
   const max = 3;
   const min = 0;
@@ -11,21 +27,34 @@ const index = Math.random(); // generating a random number
   return Math.floor(cardNumber); // Math.floor rounds down
 }
 
+// const pickedRandomCard = pickRandomCard1();
+
 function drawCard() {
-  console.log(pickRandomCard());
+  console.log(pickRandomCard1());
+  const pickRandomCard = pickRandomCard1();
   // const el = document.querySelector(".picked-card");
   // el.innerHTML = pickRandomCard();
   // console.log(el)
   const img = document.querySelector(".picked-card img");
-  img.src = `card-${pickRandomCard()}.jpg` // ${} grabs a random card
+  img.src = `card-${pickRandomCard}.jpg` // ${} grabs a random card with the 'card' prefix
   const container = document.querySelector(".picked-card");
   container.classList.add("show");
   console.log(img.src);
+
+  const cardDescription = document.querySelector(".card-description");
+  cardDescription.innerHTML = tarotCardDesc[pickRandomCard].desc; // it will pick random card but show accompanying description
+  console.log(cardDescription);
+
+  const hide = document.querySelector(".card-description");
+  hide.classList.remove("hide");
 }
 
 function shuffleCard() {
   const container = document.querySelector(".picked-card")
   container.classList.remove("show");
+
+  const hide = document.querySelector(".card-description")
+  hide.classList.add("hide");
 }
 
 /*

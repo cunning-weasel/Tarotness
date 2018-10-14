@@ -27,3 +27,15 @@
 .picked-card.show {
   transform: rotateY(180deg);
 }
+
+.card-description {
+  position: absolute;
+  top: 90%;
+  left: 5%;
+  text-align: left;
+  padding-top: 10px;
+}
+
+.hide {
+  display: none;
+}
