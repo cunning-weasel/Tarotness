@@ -20,7 +20,7 @@ const tarotCardDesc = [{
 // fuction returns number atuomaticallly
 function pickRandomCard1() {
 const index = Math.random(); // generating a random number
-  const max = 3;
+  const max = 4;
   const min = 0;
   const cardNumber = index * (max - min) + min
   return Math.floor(cardNumber); // Math.floor rounds down
